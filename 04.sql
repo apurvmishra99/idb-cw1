@@ -12,4 +12,4 @@ from (
         from exams E
         group by E.student
     ) as T on F.student = T.student
-where F.Failed / T.Total > 0.3;
+where 100.0 * F.Failed / T.Total > 30;
